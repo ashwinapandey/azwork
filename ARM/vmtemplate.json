@@ -132,6 +132,9 @@
       "apiVersion": "2016-04-30-preview",
       "type": "Microsoft.Compute/virtualMachines",
       "name": "[variables('vmName')]",
+	  "identity": { 
+		"type": "SystemAssigned"
+      },
       "location": "[variables('location')]",
       "dependsOn": [
         "[concat('Microsoft.Network/networkInterfaces/', variables('nicName'))]"
